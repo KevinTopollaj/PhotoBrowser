@@ -83,7 +83,8 @@ extension PhotoListView: UITableViewDataSource {
         guard let cell = cell else { return }
         
         switch result {
-        case .success(let image):
+        case .success(let imageData):
+          let image = UIImage(data: imageData)
           DispatchQueue.main.async {
             cell.photoImageView.image = image
           }

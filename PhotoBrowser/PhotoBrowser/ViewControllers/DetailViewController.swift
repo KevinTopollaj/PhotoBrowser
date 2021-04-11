@@ -63,7 +63,8 @@ class DetailViewController: UIViewController {
         guard let self = self else { return }
         
         switch result {
-        case .success(let image):
+        case .success(let imageData):
+          let image = UIImage(data: imageData)
           DispatchQueue.main.async {
             self.mainPhotoImageView.image = image
           }

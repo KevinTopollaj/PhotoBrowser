@@ -50,7 +50,7 @@ final class PhotoListViewModel {
     }
   }
   
-  func loadImage(url: URL, completion: @escaping (Result<UIImage,Error>) -> Void) -> UUID? {
+  func loadImage(url: URL, completion: @escaping (Result<Data,Error>) -> Void) -> UUID? {
     let uuid = imageLoader.loadImage(url: url, completion: completion)
     return uuid
   }

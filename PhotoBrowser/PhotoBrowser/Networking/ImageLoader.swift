@@ -10,25 +10,27 @@ import UIKit
 class ImageLoader {
   
   // cache
-  private var loadedImages = [URL: UIImage]()
+  private var imagesCache = NSCache<NSString, NSData>()
   
   // requests being performed for image download
   private var runningRequests = [UUID: URLSessionDataTask]()
   
-  func loadImage(url: URL, completion: @escaping (Result<UIImage,Error>) -> Void) -> UUID? {
-    if let image = loadedImages[url] {
-      completion(.success(image))
+  func loadImage(url: URL, completion: @escaping (Result<Data,Error>) -> Void) -> UUID? {
+    
+    if let imageData = imagesCache.object(forKey: url.absoluteString as NSString) {
+      completion(.success(imageData as Data))
       return nil
     }
     
     let uuid = UUID()
     
     let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+      
       defer { self.runningRequests.removeValue(forKey: uuid) }
       
-      if let data = data, let image = UIImage(data: data) {
-        self.loadedImages[url] = image
-        completion(.success(image))
+      if let data = data {
+        self.imagesCache.setObject(data as NSData, forKey: url.absoluteString as NSString)
+        completion(.success(data))
         return
       }
       
