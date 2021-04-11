@@ -109,5 +109,10 @@ extension PhotoListView: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     200
   }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let photo = viewModel.getPhoto(at: indexPath)
+    delegate?.selectedPhoto(sender: self, photo: photo)
+  }
 }
 
