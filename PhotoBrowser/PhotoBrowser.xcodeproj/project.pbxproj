@@ -20,6 +20,7 @@
 		1F8B4A172623506D0095A3F3 /* PhotoFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B4A162623506D0095A3F3 /* PhotoFeed.swift */; };
 		1F8B4A1A262357040095A3F3 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B4A19262357040095A3F3 /* APIError.swift */; };
 		1F8B4A1D262358D60095A3F3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B4A1C262358D60095A3F3 /* APIClient.swift */; };
+		1F8B4A20262367D70095A3F3 /* PexelsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B4A1F262367D70095A3F3 /* PexelsClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1F8B4A162623506D0095A3F3 /* PhotoFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFeed.swift; sourceTree = "<group>"; };
 		1F8B4A19262357040095A3F3 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		1F8B4A1C262358D60095A3F3 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		1F8B4A1F262367D70095A3F3 /* PexelsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				1F8B4A1026234D890095A3F3 /* Endpoint.swift */,
 				1F8B4A19262357040095A3F3 /* APIError.swift */,
 				1F8B4A1C262358D60095A3F3 /* APIClient.swift */,
+				1F8B4A1F262367D70095A3F3 /* PexelsClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				1F8B4A0726234ACB0095A3F3 /* PhotoFeedResult.swift in Sources */,
 				1F8B4A1A262357040095A3F3 /* APIError.swift in Sources */,
 				1F8B49E7262330730095A3F3 /* SceneDelegate.swift in Sources */,
+				1F8B4A20262367D70095A3F3 /* PexelsClient.swift in Sources */,
 				1F8B4A1D262358D60095A3F3 /* APIClient.swift in Sources */,
 				1F8B4A0E26234CA00095A3F3 /* PhotoSize.swift in Sources */,
 				1F8B4A0326233FAC0095A3F3 /* HomeViewController.swift in Sources */,
