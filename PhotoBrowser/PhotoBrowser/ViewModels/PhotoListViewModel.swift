@@ -15,11 +15,13 @@ final class PhotoListViewModel {
   
   private var photos = [Photo]()
   private let pexelsClient: PexelsClient
+  private let imageLoader: ImageLoader
   weak var delegate: PhotoListViewModelDelegate?
   var currentPage = 0
   
   init() {
     pexelsClient = PexelsClient()
+    imageLoader = ImageLoader()
     loadPhotos()
   }
   
@@ -45,6 +47,17 @@ final class PhotoListViewModel {
       case .failure(let error):
         print(error)
       }
+    }
+  }
+  
+  func loadImage(url: URL, completion: @escaping (Result<UIImage,Error>) -> Void) -> UUID? {
+    let uuid = imageLoader.loadImage(url: url, completion: completion)
+    return uuid
+  }
+  
+  func cancel(uuid: UUID?) {
+    if let uuid = uuid {
+      imageLoader.cancel(uuid: uuid)
     }
   }
   

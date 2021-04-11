@@ -24,6 +24,7 @@
 		1F8B4A2326236B690095A3F3 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B4A2226236B690095A3F3 /* PhotoListViewModel.swift */; };
 		1F8B4A26262371800095A3F3 /* PhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B4A25262371800095A3F3 /* PhotoListView.swift */; };
 		1F8B4A29262376060095A3F3 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B4A28262376060095A3F3 /* PhotoCell.swift */; };
+		1F8B4A2C26237E590095A3F3 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B4A2B26237E590095A3F3 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		1F8B4A2226236B690095A3F3 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
 		1F8B4A25262371800095A3F3 /* PhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListView.swift; sourceTree = "<group>"; };
 		1F8B4A28262376060095A3F3 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		1F8B4A2B26237E590095A3F3 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				1F8B4A19262357040095A3F3 /* APIError.swift */,
 				1F8B4A1C262358D60095A3F3 /* APIClient.swift */,
 				1F8B4A1F262367D70095A3F3 /* PexelsClient.swift */,
+				1F8B4A2B26237E590095A3F3 /* ImageLoader.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				1F8B49E5262330730095A3F3 /* AppDelegate.swift in Sources */,
 				1F8B4A26262371800095A3F3 /* PhotoListView.swift in Sources */,
 				1F8B4A0726234ACB0095A3F3 /* PhotoFeedResult.swift in Sources */,
+				1F8B4A2C26237E590095A3F3 /* ImageLoader.swift in Sources */,
 				1F8B4A1A262357040095A3F3 /* APIError.swift in Sources */,
 				1F8B49E7262330730095A3F3 /* SceneDelegate.swift in Sources */,
 				1F8B4A20262367D70095A3F3 /* PexelsClient.swift in Sources */,

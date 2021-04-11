@@ -76,6 +76,30 @@ extension PhotoListView: UITableViewDataSource {
     let photo = viewModel.getPhoto(at: indexPath)
     cell.photographerLabel.text = photo.photographer
     cell.photographerTagLabel.text = photo.photographer_tag
+    
+    if let url = URL(string: photo.src.landscape) {
+      let uuid = viewModel.loadImage(url: url) { [weak cell] result in
+
+        guard let cell = cell else { return }
+        
+        switch result {
+        case .success(let image):
+          DispatchQueue.main.async {
+            cell.photoImageView.image = image
+          }
+        case .failure(let error):
+          print(error)
+        }
+      }
+      
+      cell.onReuse = {
+        if let uuid = uuid {
+          self.viewModel.cancel(uuid: uuid)
+        }
+      }
+      
+    }
+    
     return cell
   }
 }
