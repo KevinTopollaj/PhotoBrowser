@@ -114,5 +114,11 @@ extension PhotoListView: UITableViewDelegate {
     let photo = viewModel.getPhoto(at: indexPath)
     delegate?.selectedPhoto(sender: self, photo: photo)
   }
+  
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    if indexPath.row == viewModel.count - 10 {
+      viewModel.loadPhotos()
+    }
+  }
 }
 
