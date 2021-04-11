@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  PhotoBrowser
 //
 //  Created by Kevin Topollaj on 11.4.21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
