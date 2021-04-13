@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
   
+  // MARK: - Properties -
   lazy var photoListView: PhotoListView = {
     let photoListView = PhotoListView()
     photoListView.translatesAutoresizingMaskIntoConstraints = false
@@ -16,6 +17,7 @@ class HomeViewController: UIViewController {
     return photoListView
   }()
   
+  // MARK: - Life cycle -
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -23,6 +25,7 @@ class HomeViewController: UIViewController {
     setupView()
   }
   
+  // MARK: - Setup View and Constraints -
   func setupView() {
     view.addSubview(photoListView)
     setupConstraints()
@@ -38,10 +41,11 @@ class HomeViewController: UIViewController {
   }
 }
 
+// MARK: - PhotoListViewDelegate -
 extension HomeViewController: PhotoListViewDelegate {
   func selectedPhoto(sender: PhotoListView, photo: Photo) {
     let detailViewController = DetailViewController()
-    detailViewController.photo = photo
+    detailViewController.detailView.photo = photo
     present(detailViewController, animated: true)
   }
 }

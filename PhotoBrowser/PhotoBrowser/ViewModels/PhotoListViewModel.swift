@@ -7,24 +7,28 @@
 
 import UIKit
 
+// MARK: - PhotoListViewModelDelegate -
 protocol PhotoListViewModelDelegate: class {
   func photosLoaded(sender: PhotoListViewModel)
 }
 
 final class PhotoListViewModel {
   
+  // MARK: - Properties -
   private var photos = [Photo]()
   private let pexelsClient: PexelsClient
   private let imageLoader: ImageLoader
   weak var delegate: PhotoListViewModelDelegate?
   var currentPage = 0
   
+  // MARK: - Initializer -
   init() {
     pexelsClient = PexelsClient()
     imageLoader = ImageLoader()
     loadPhotos()
   }
   
+  // MARK: - Helper Methods -
   var count: Int {
     photos.count
   }

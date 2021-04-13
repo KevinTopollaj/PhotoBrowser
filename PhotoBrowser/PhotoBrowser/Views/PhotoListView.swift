@@ -13,6 +13,7 @@ protocol PhotoListViewDelegate: class {
 }
 
 class PhotoListView: UIView {
+  // MARK: - Properties -
   weak var delegate: PhotoListViewDelegate?
   
   lazy var viewModel: PhotoListViewModel = {
@@ -21,6 +22,7 @@ class PhotoListView: UIView {
     return viewModel
   }()
   
+  // MARK: - UI -
   lazy var tableView: UITableView = {
     let tableView = UITableView()
     tableView.translatesAutoresizingMaskIntoConstraints = false
